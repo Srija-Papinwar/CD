@@ -1,0 +1,8 @@
+requests
+# beautifulsoup4
+# if unable to install the rebotframework-sshlibrary try upgrading "pip3 install -U pip"
+robotframework-sshlibray
+pyvmomi
+jmespath
+gitpython
+docker
