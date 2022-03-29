@@ -31,7 +31,7 @@
 		"dcs_password": "hponeview"
 	},
 	"deploy_ova":{
-		"vcenterip":"15.146.41.16",
+		"vcenterip":"15.146.41.16",	
 		"user":"SrijaP@LAB.LOCAL",
 		"password":"Welcome123#",
 		"vmname":"atuo_vm",
