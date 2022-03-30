@@ -34,7 +34,7 @@
 		"vcenterip":"15.146.41.16",	
 		"user":"SrijaP@LAB.LOCAL",
 		"password":"Welcome123#",
-		"vmname":"atuo_vm",
+		"vmname":"Shell_vm",
 		"datacenter":"ZeusDC",
 		"cluster":"Cluster01",
 		"host":"15.146.41.25",

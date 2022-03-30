@@ -1,4 +1,5 @@
 import atexit
+import sys
 from pyVim.connect import SmartConnect, Disconnect
 from pyVmomi import vim
 import ipaddress
@@ -31,7 +32,7 @@ def ip(vmname):
     for vm in vm_view.view:
         if vm.name == vmname:
             return vm.guest.net
-ipAdress=ip(config["vmname"])
+ipAdress=ip(sys.argv[1])
 file1 = open("ipv6.txt", "w")
 output=""
 content=str(ipAdress)

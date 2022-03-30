@@ -482,9 +482,9 @@ if __name__ == "__main__":
         while ipv6:
             if ping(ipv6):
                 ipv6=ipv6.strip()
-                dcs_inst = dcs(ipv6, interfaces[0] , config["dcs_username"], config["dcs_password"])
-                dcs_inst.dcs_network_configuration(config["dcs_ipv4_1"], config["dcs_ipv4_2"], config["dcs_ipv4_3"],
-                                                   config["gateway"], config["subnet_mask"])
+                dcs_inst = dcs(ipv6, interfaces[0] , sys.argv[1], sys.argv[2])
+                dcs_inst.dcs_network_configuration(sys.argv[3], sys.argv[4], sys.argv[5],
+                                                   sys.argv[6], sys.argv[7])
                 dcs_inst.dcs_schematic_configuration(dcs_commands)
                 break
             else:
