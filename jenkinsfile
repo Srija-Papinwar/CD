@@ -23,7 +23,7 @@ pipeline
             steps
             {
                 
-                sh '/var/lib/jenkins/workspace/pipeshell/2.sh $vmname'
+                sh '/var/lib/jenkins/workspace/pipeshell/2.sh $vmname $ip_vc $username_vc $pswd_vc'
                 sleep time: 12, unit: 'MINUTES'
             }
         }

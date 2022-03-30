@@ -4,8 +4,6 @@ from pyVim.connect import SmartConnect, Disconnect
 from pyVmomi import vim
 import ipaddress
 import os
-from auto_loader import load_from_file
-config = load_from_file("auto_config")["deploy_ova"]
 def get_ipv6(address):
     ip = ipaddress.ip_address(address)
     if isinstance(ip, ipaddress.IPv6Address):
@@ -26,7 +24,7 @@ def connect(host1,user1,pswd,port1):
 
     return service_instance
 def ip(vmname):
-    si = connect(config["vcenterip"],config["user"],config["password"],443)
+    si = connect(sys.argv[2],sys.argv[3],sys.argv[4],443)
     vm_view = si.content.viewManager.CreateContainerView(si.content.rootFolder,[vim.VirtualMachine],True)
     # Loop through the vms and print the ipAddress
     for vm in vm_view.view:

@@ -5,12 +5,6 @@ import platform, os, sys
 import time
 import netifaces
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-print("4")
-print(BASE_DIR)
-print(sys.path.append(BASE_DIR))
-from auto_loader import load_from_file
-
 import logging
 logging.basicConfig(level=logging.INFO)
 
@@ -474,7 +468,6 @@ def ping(hosts):
 
 
 interfaces = list(filter(lambda x: "ens" in x, netifaces.interfaces()))
-config = load_from_file("auto_config")["fts"]
 if __name__ == "__main__":
     if len(interfaces) > 0:
         f=open("ipv6.txt")
