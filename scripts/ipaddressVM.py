@@ -25,7 +25,7 @@ def connect(host1,user1,pswd,port1):
     return service_instance
 def ip(vmname):
     print(sys.argv[1]+" "+sys.argv[2]+" "+" "+sys.argv[3]+" "+sys.argv[4])
-    si = connect(sys.argv[2],sys.argv[3],"Welcome123#",443)
+    si = connect(sys.argv[2],sys.argv[3],sys.argv[4],443)
     vm_view = si.content.viewManager.CreateContainerView(si.content.rootFolder,[vim.VirtualMachine],True)
     # Loop through the vms and print the ipAddress
     for vm in vm_view.view:
