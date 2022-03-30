@@ -1,0 +1,40 @@
+pipeline
+{
+    agent any
+    stages
+    {
+        stage('git-checkout')
+        {
+            steps{
+            git credentialsId: '7ea0b9b7-7f24-48bc-b178-d1ce90f64298', 
+            url: 'https://github.com/Srija-Papinwar/CD.git'}
+        }
+        stage('deploy_ova')
+        {
+            steps
+            {
+                
+                sh '/var/lib/jenkins/workspace/pipeshell/1.sh ${network} ${datastore} ${vmname} ${buildpath} ${username_vc} ${pswd_vc} ${ip_vc} ${datacenter} ${cluster} ${host} '
+                sleep time: 6, unit: 'MINUTES'
+            }
+        }
+        stage('ipaddressVM')
+        {
+            steps
+            {
+                
+                sh '/var/lib/jenkins/workspace/pipeshell/2.sh $vmname'
+                sleep time: 12, unit: 'MINUTES'
+            }
+        }
+        stage('dcs_fts')
+        {
+            steps
+            {
+                
+                sh '/var/lib/jenkins/workspace/pipeshell/3.sh $username_dcs $pswd_dcs $ip1 $ip2 $ip3 $gateway $subnet'
+                
+            }
+        }
+    }
+}
