@@ -6,7 +6,7 @@ complete path of .exe for using ovftool command
 '
 #!/bin/bash
 
-# This 'for loop' is for encoding the string pswd
+# This for loop is for encoding the string pswd
 
 string="${6}"
 for(( p=0 ; p<${#6} ; p++)); do
