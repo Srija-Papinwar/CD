@@ -1,5 +1,11 @@
-# This script can be used independently to scrape the latest RC OVA build
-# and download it to local system
+"""
+Before executing this script make sure that all packages are installed properly
+purpose:
+-------
+This script can be used independently to scrape the latest RC OVA build and
+downloads OVA and place it in local system. 
+
+"""
 
 import requests
 from bs4 import BeautifulSoup
@@ -35,14 +41,13 @@ def find_td_entries(original):
             td_entries.append(each_td)
     ova_rc_build = str(td_entries[1]).replace("<td>","").replace("</a>","").replace("</td>","").replace(">","!").split("!")[1]
     return ova_rc_build
+    
+# execution starts here ...
 
 ova_rc_build = find_td_entries(True)
 if ova_rc_build.find('FAILED') == '-1':
-    ova_rc_build = find_td_entries(False)
-    
+    ova_rc_build = find_td_entries(False)    
 file_name =  "latestbuildfile.ova"
-
-# download OVA and place it in local system
 while(True):
     url1 = URL + ova_rc_build
     urllib.request.urlretrieve(url1, file_name)

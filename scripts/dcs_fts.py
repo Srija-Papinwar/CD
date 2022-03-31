@@ -1,3 +1,12 @@
+"""
+Before executing this script make sure that all packages are installed properly
+and also select 3 ips from resource pool wiki which are not in use.(check using ping command)
+purpose:
+-------
+This script is for first time setup of dcs vm which includes 
+accepting eula,changing password,configure the ip and changing the schema of dcs vm. 
+
+"""
 from re import search, IGNORECASE
 from SSHLibrary import SSHLibrary
 import json
@@ -117,7 +126,8 @@ class dcs(object):
         return command
 
     def accept_eula_once(self, service_access="yes"):
-        """On initial communication with the appliance, the end user service agreement (EULA) must be accepted.
+        """
+        On initial communication with the appliance, the end user service agreement (EULA) must be accepted.
         This only needs to occur once.  Additional calls will not change the status of the EULA nor the status of the service access.
         If a change to the service access is required, see the function change_service_access()
         If the appliance returns an error status (anything outside of the 100 or 200 range), an error is raised.
@@ -152,7 +162,8 @@ class dcs(object):
                     json.dumps(save_success)))
 
     def change_administrator_password(self):
-        """On initial logon, the administrator's password has to be changed from the default value.
+        """
+        On initial logon, the administrator's password has to be changed from the default value.
         The call to the administrator password change is attempted.
         If the change administrator password call fails, then we attempt to login with the administrator password.
         If successful, we log a message and the accurate administrator password.
@@ -180,7 +191,8 @@ class dcs(object):
                 format(json.dumps(status)))
 
     def get_secure_headers(self):
-        """Helper method to appliance_request().
+        """
+        Helper method to appliance_request().
         Gives header information required by the appliance with authentication information.
         Return
         ------
@@ -243,7 +255,8 @@ class dcs(object):
 
     def change_ovDcs_ip(self, app1Ipv4Addr, app2Ipv4Addr, virtIpv4Addr,
         ipv4Gateway, ipv4Subnet, ):
-        """Changes the Ip address of the oneview dcs appliance.
+        """
+        Changes the Ip address of the oneview dcs appliance.
 
         Parameters:
         ----------
