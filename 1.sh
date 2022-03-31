@@ -23,4 +23,4 @@ echo "${e}"
 
 # OVFTOOL command
 
-./ovftool  --noSSLVerify --powerOn -nw=$1 -ds=$2 -n=$3 $4  vi://$5:${e}@$7/$8/host/$9/${10}
+ovftool  --noSSLVerify --powerOn -nw=$1 -ds=$2 -n=$3 $4  vi://$5:${e}@$7/$8/host/$9/${10}
