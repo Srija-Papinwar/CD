@@ -1,10 +1,12 @@
+#!/bin/bash
+
 : '
 This scripts uses OVFTOOL for for deployment of ova with specified parameters.
 This shell script needs OVFTOOL to be setup before executing command and provide
 complete path of .exe for using ovftool command
 
 '
-#!/bin/bash
+
 
 # This for loop is for encoding the string pswd
 

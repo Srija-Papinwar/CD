@@ -14,7 +14,7 @@ pipeline
             steps
             {
                 
-                sh '/var/lib/jenkins/workspace/pipeshell/1.sh ${network} ${datastore} ${vmname} ${buildpath} ${username_vc} ${pswd_vc} ${ip_vc} ${datacenter} ${cluster} ${host} '
+                sh '/var/lib/jenkins/workspace/pipeshell/1.sh ${network} ${datastore} ${vmname} ${buildpath} ${username_vc} ${pswd_vc} ${ip_vc} ${datacenter} ${cluster} ${host}'
                 sleep time: 6, unit: 'MINUTES'
             }
         }
