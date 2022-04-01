@@ -1,45 +1,49 @@
 {
+    "python": {
+        "storage_system_password": "<storage-password>", 
+        "hypervisor_password": "<hypervisor-manager-password>", 
+        "hypervisor_user_name": "<hypervisor_manager-username>", 
+        "storage_system_hostname": "<storage-user-ip>", 
+        "storage_system_family": "<example-StoreServ>", 
+        "server_certificate_ip": "<server-certificate-ip>", 
+        "hypervisor_manager_ip": "<hypervisort-manager-ip>", 
+        "storage_system_username": "<storage-user-name>"
+    }, 
     "oneview_cred": {
-        "oneview_ip": "<oneview-appliance-ip>",
-        "user_name": "<oneview-account-username>",
-        "password": "<oneview-password>",
-        "domain_directory": "<oneview-domain-directory>",
-        "api_version": "<oneview-REST-verison>",
-        "hardware_variant": "<example-Synergy/C700>",
-        "i3s_ip": "<image-streamer-IP>"
-    },
+        "domain_directory": "<oneview-domain-directory>", 
+        "i3s_ip": "<image-streamer-IP>", 
+        "hardware_variant": "<example-Synergy/C700>", 
+        "oneview_ip": "<oneview-appliance-ip>", 
+        "password": "<oneview-password>", 
+        "user_name": "<oneview-account-username>", 
+        "api_version": "<oneview-REST-verison>"
+    }, 
+    "fts": {
+        "dcs_ipv4_3": "10.1.19.43", 
+        "dcs_ipv4_2": "10.1.19.42", 
+        "dcs_ipv4_1": "10.1.19.41", 
+        "dcs_username": "root", 
+        "subnet_mask": "255.255.192.0", 
+        "gateway": "10.1.0.1", 
+        "dcs_password": "hponeview"
+    }, 
     "collection": {
         "collection_path": "<path-to-oneview-ansible-collection/playbooks>"
+
     },
-    "python": {
-        "server_certificate_ip": "<server-certificate-ip>",
-        "hypervisor_manager_ip": "<hypervisort-manager-ip>",
-        "hypervisor_user_name": "<hypervisor_manager-username>",
-        "hypervisor_password": "<hypervisor-manager-password>",
-        "storage_system_hostname": "<storage-user-ip>",
-        "storage_system_username": "<storage-user-name>",
-        "storage_system_password": "<storage-password>",
-        "storage_system_family": "<example-StoreServ>"
-    },
-    "fts": {
-        "dcs_ipv4_1": "<ip-of-the-OV-DCS-appliance>",
-        "dcs_ipv4_2": "<ip-of-the-OV-DCS-appliance>",
-        "dcs_ipv4_3": "<ip-of-the-OV-DCS-appliance>",
-        "gateway": "<OV-DCS-applinace-gatway>",
-        "subnet_mask": "<OV-DCS-subnet-mask>",
-        "dcs_username": "",
-        "dcs_password": ""
-    },
+    
+    
+    
     "deploy_ova": {
-        "vcenter_ip": "15.146.41.26",
-        "vcenter_username": "SrijaP@LAB.LOCAL",
-        "vcenter_password": "Welcome123#",
-        "datacenter": "ZeusDC",
-        "cluster": "Cluster01",
-        "host": "",
-        "network": "pgVLAN141",
-        "datastore": "vsanDatastore",
-        "ova_path": "/home/venkatesh/latestbuildfile.ova",
-        "vmname": ""
+        "vcenter_username": "SrijaP@LAB.LOCAL", 
+        "datacenter": "ZeusDC", 
+        "ova_path": "/home/venkatesh/latestbuildfile.ova", 
+        "network": "pgVLAN141", 
+        "vcenter_ip": "15.146.41.16", 
+        "cluster": "Cluster01", 
+        "host": "15.146.41.27", 
+        "datastore": "vsanDatastore", 
+        "vcenter_password": "Welcome123#", 
+        "vmname": "master"
     }
 }
