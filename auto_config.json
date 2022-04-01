@@ -9,15 +9,6 @@
         "hypervisor_manager_ip": "<hypervisort-manager-ip>", 
         "storage_system_username": "<storage-user-name>"
     }, 
-    "oneview_cred": {
-        "domain_directory": "<oneview-domain-directory>", 
-        "i3s_ip": "<image-streamer-IP>", 
-        "hardware_variant": "<example-Synergy/C700>", 
-        "oneview_ip": "<oneview-appliance-ip>", 
-        "password": "<oneview-password>", 
-        "user_name": "<oneview-account-username>", 
-        "api_version": "<oneview-REST-verison>"
-    }, 
     "fts": {
         "dcs_ipv4_3": "10.1.19.43", 
         "dcs_ipv4_2": "10.1.19.42", 
@@ -27,13 +18,6 @@
         "gateway": "10.1.0.1", 
         "dcs_password": "hponeview"
     }, 
-    "collection": {
-        "collection_path": "<path-to-oneview-ansible-collection/playbooks>"
-
-    },
-    
-    
-    
     "deploy_ova": {
         "vcenter_username": "SrijaP@LAB.LOCAL", 
         "datacenter": "ZeusDC", 
@@ -41,9 +25,21 @@
         "network": "pgVLAN141", 
         "vcenter_ip": "15.146.41.16", 
         "cluster": "Cluster01", 
-        "host": "15.146.41.27", 
+        "host": "15.146.41.25", 
         "datastore": "vsanDatastore", 
         "vcenter_password": "Welcome123#", 
-        "vmname": "master"
+        "vmname": "jenmaster"
+    }, 
+    "collection": {
+        "collection_path": "<path-to-oneview-ansible-collection/playbooks>"
+    }, 
+    "oneview_cred": {
+        "domain_directory": "<oneview-domain-directory>", 
+        "i3s_ip": "<image-streamer-IP>", 
+        "hardware_variant": "<example-Synergy/C700>", 
+        "oneview_ip": "<oneview-appliance-ip>", 
+        "password": "<oneview-password>", 
+        "user_name": "<oneview-account-username>", 
+        "api_version": "<oneview-REST-verison>"
     }
 }
