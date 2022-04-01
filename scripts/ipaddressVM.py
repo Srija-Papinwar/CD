@@ -12,6 +12,8 @@ from pyVim.connect import SmartConnect, Disconnect
 from pyVmomi import vim
 import ipaddress
 import os
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.append(BASE_DIR)
 from auto_loader import load_from_file
 def check_ipv6(address):
     """
