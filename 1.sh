@@ -23,7 +23,6 @@ echo "${e}"
 
 # OVFTOOL command
 
-cd /var/lib/jenkins/workspace/ovftool/
-vmware-ovftool/ovftool  --noSSLVerify --powerOn -nw=$(jq -r '.deploy_ova.network' auto_config.json) -ds=$(jq -r '.deploy_ova.datastore' auto_config.json) -n=$(jq -r '.deploy_ova.vmname' auto_config.json) $(jq -r '.deploy_ova.ova_path' auto_config.json)  vi://$(jq -r '.deploy_ova.vcenter_username' auto_config.json):${e}@$(jq -r '.deploy_ova.vcenter_ip' auto_config.json)/$(jq -r '.deploy_ova.datacenter' auto_config.json)/host/$(jq -r '.deploy_ova.cluster' auto_config.json)/$(jq -r '.deploy_ova.host' auto_config.json)
+/var/lib/jenkins/workspace/ovftool/vmware-ovftool/ovftool  --noSSLVerify --powerOn -nw=$(jq -r '.deploy_ova.network' auto_config.json) -ds=$(jq -r '.deploy_ova.datastore' auto_config.json) -n=$(jq -r '.deploy_ova.vmname' auto_config.json) $(jq -r '.deploy_ova.ova_path' auto_config.json)  vi://$(jq -r '.deploy_ova.vcenter_username' auto_config.json):${e}@$(jq -r '.deploy_ova.vcenter_ip' auto_config.json)/$(jq -r '.deploy_ova.datacenter' auto_config.json)/host/$(jq -r '.deploy_ova.cluster' auto_config.json)/$(jq -r '.deploy_ova.host' auto_config.json)
 
 
