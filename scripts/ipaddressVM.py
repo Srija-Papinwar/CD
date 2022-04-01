@@ -12,6 +12,7 @@ from pyVim.connect import SmartConnect, Disconnect
 from pyVmomi import vim
 import ipaddress
 import os
+from auto_loader import load_from_file
 def check_ipv6(address):
     """
     Purpose:
@@ -84,7 +85,7 @@ def ip_content(vmname):
 
     """
     # print(sys.argv[1]+" "+sys.argv[2]+" "+" "+sys.argv[3]+" "+sys.argv[4])
-    si = connect(sys.argv[2],sys.argv[3],sys.argv[4],443)
+    si = connect(config["vcenter_ip"],config["vcenter_username"],config["vcenter_password"],443)
     vm_view = si.content.viewManager.CreateContainerView(si.content.rootFolder,[vim.VirtualMachine],True)
     # Loop through the vms and print the ipAddress
     for vm in vm_view.view:
@@ -126,7 +127,7 @@ def get_ipv6ips(content):
         check_ipv6(i.strip(" ' "))
 
 # Execution starts from here...
-
+config = load_from_file("auto_config")["deploy_ova"]
 file = open("ipv6.txt", "w")
 # print(str(ip_content(sys.argv[1])))
-get_ipv6ips(str(ip_content(sys.argv[1])))
+get_ipv6ips(str(ip_content(config["vmname"])))
