@@ -4,4 +4,4 @@ This is script is helper script which helps executing the python script called d
 python3 -m pip install --upgrade robotframework-sshlibrary
 python3 -m pip install -r requriments.txt
 cd scripts
-python3 dcs_fts.py $1 $2 $3 $4 $5 $6 $7
+python3 dcs_fts.py 

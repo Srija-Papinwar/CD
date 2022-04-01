@@ -27,8 +27,8 @@
         "dcs_ipv4_3": "<ip-of-the-OV-DCS-appliance>",
         "gateway": "<OV-DCS-applinace-gatway>",
         "subnet_mask": "<OV-DCS-subnet-mask>",
-        "dcs_username": "admi",
-        "dcs_password": "admin12"
+        "dcs_username": "",
+        "dcs_password": ""
     },
     "deploy_ova": {
         "vcenter_ip": "15.146.41.26",
@@ -36,10 +36,10 @@
         "vcenter_password": "Welcome123#",
         "datacenter": "ZeusDC",
         "cluster": "Cluster01",
-        "host": "15.146.41.67",
+        "host": "",
         "network": "pgVLAN141",
         "datastore": "vsanDatastore",
         "ova_path": "/home/venkatesh/latestbuildfile.ova",
-        "vmname": "config"
+        "vmname": ""
     }
 }

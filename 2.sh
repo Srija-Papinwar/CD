@@ -5,7 +5,7 @@ This is script is helper script which helps executing the python script called i
 '
 cd scripts
 python3 -m pip install pyvmomi
-python3 ipaddressVM.py $1 $2 $3 $4
+python3 ipaddressVM.py 
 
 
 

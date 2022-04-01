@@ -14,7 +14,7 @@ pipeline
             steps
             {
                 
-                sh './1.sh ${network} ${datastore} ${vmname} ${buildpath} ${username_vc} ${pswd_vc} ${ip_vc} ${datacenter} ${cluster} ${host}'
+                sh './1.sh'
                 sleep time: 6, unit: 'MINUTES'
             }
         }
@@ -23,7 +23,7 @@ pipeline
             steps
             {
                 
-                sh './2.sh $vmname ${ip_vc} ${username_vc} ${pswd_vc}'
+                sh './2.sh'
                 sleep time: 12, unit: 'MINUTES'
             }
         }
@@ -32,7 +32,7 @@ pipeline
             steps
             {
                 
-                sh './3.sh $username_dcs $pswd_dcs $ip1 $ip2 $ip3 $gateway $subnet'
+                sh './3.sh'
                 
             }
         }
