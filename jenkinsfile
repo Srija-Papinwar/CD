@@ -3,12 +3,7 @@ pipeline
     agent any
     stages
     {
-        stage('git-checkout')
-        {
-            steps{
-            git credentialsId: '7ea0b9b7-7f24-48bc-b178-d1ce90f64298', 
-            url: 'https://github.com/Srija-Papinwar/CD.git'}
-        }
+        
         stage('deploy_ova')
         {
             steps

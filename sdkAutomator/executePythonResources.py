@@ -80,7 +80,7 @@ class executePythonResources():
                     json_object["storage_system_password"] = self.auto_config["python"]["storage_system_password"]
                     json_object["storage_system_family"] = self.auto_config["python"]["storage_system_family"]
                     with open(self.config_file, 'w') as config:
-                        json.dump(json_object, config)
+                        json.dump(json_object, config,indent=4)
             # if there is an exception thrown while updating credentials, revert all previous operations
             # to make it constant.
             except Exception as e:

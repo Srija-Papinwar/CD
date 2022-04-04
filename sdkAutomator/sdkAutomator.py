@@ -111,7 +111,7 @@ def updateJsonFile():
 
     ## Save our changes to JSON file
     jsonFile = open("auto_config.json", "w+")
-    jsonFile.write(json.dumps(data))
+    json.dumps(data,jsonFile,indent=4)
     jsonFile.close()
 
 if __name__ == '__main__':

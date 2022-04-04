@@ -6,17 +6,17 @@
         "storage_system_hostname": "<storage-user-ip>", 
         "storage_system_family": "<example-StoreServ>", 
         "server_certificate_ip": "<server-certificate-ip>", 
-        "hypervisor_manager_ip": "<hypervisort-manager-ip>", 
+        "hypervisor_manager_ip": "<hypervisor-manager-ip>", 
         "storage_system_username": "<storage-user-name>"
     }, 
     "oneview_cred": {
         "domain_directory": "<oneview-domain-directory>", 
         "i3s_ip": "<image-streamer-IP>", 
         "hardware_variant": "<example-Synergy/C700>", 
-        "oneview_ip": "<oneview-appliance-ip>", 
-        "password": "<oneview-password>", 
-        "user_name": "<oneview-account-username>", 
-        "api_version": "<oneview-REST-verison>"
+        "oneview_ip": "10.1.19.43", 
+        "password": "admin123", 
+        "user_name": "adminstrator", 
+        "api_version": "3800"
     }, 
     "fts": {
         "dcs_ipv4_3": "10.1.19.43", 
