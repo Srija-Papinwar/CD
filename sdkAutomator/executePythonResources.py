@@ -110,8 +110,8 @@ class executePythonResources():
             except Exception as e:
                 print("Failed to execute {} with exception {}".format(str(example),(str(e))))
                 self.failed_files.append(example)
-        os.remove(self.config_file)
-        shutil.copyfile(self.config_rename_dummy_file, self.config_rename_file)
-        os.remove(self.config_rename_dummy_file)
+        # os.remove(self.config_file)
+        # shutil.copyfile(self.config_rename_dummy_file, self.config_rename_file)
+        # os.remove(self.config_rename_dummy_file)
         os.chdir(cwd)
         return self.success_files

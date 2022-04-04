@@ -138,7 +138,7 @@ if __name__ == '__main__':
 
     repo.git.add(A=True)
     repo.git.commit('-m', 'PR for reelase changes #pr',
-                    author='papinwarsrija@gmail.com') # to commit changes
+                    author='chebroluharika@gmail.com') # to commit changes
     repo.git.push('--set-upstream', 'origin', branchName)
     repo.close()
     os.chdir(path) # Navigate to parent directory

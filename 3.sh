@@ -1,3 +1,4 @@
+#!/bin/bash
 :'
 This is script is helper script which helps executing the python script called dcs_fts
 '
