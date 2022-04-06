@@ -3,6 +3,7 @@ import shutil
 import subprocess
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(BASE_DIR)
+print(sys.version)
 # sys.path.append("/home/venkatesh/Documents/oneview-python/examples")
 from auto_loader import load_from_file
 
@@ -102,7 +103,7 @@ class executePythonResources():
         """
         cwd = os.getcwd()
         os.chdir('/home/venkatesh/Documents/oneview-python/examples')
-        for example in self.exe:
+        for example in ["ethernet_networks"]:
             try:
                 print(os.getcwd())
                 example_file = example + str('.py')
