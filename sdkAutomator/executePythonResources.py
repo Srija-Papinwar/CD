@@ -1,8 +1,9 @@
 import os, json, sys
 import shutil
-
+import subprocess
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(BASE_DIR)
+# sys.path.append("/home/venkatesh/Documents/oneview-python/examples")
 from auto_loader import load_from_file
 
 
@@ -103,10 +104,20 @@ class executePythonResources():
         os.chdir('/home/venkatesh/Documents/oneview-python/examples')
         for example in self.exe:
             try:
+                print(os.getcwd())
                 example_file = example + str('.py')
                 print(">> Executing {}..".format(example))
-                exec(compile(open(example_file).read(), example_file, 'exec'))
-                self.success_files.append(example)    
+                p1=subprocess.run(['python3',example_file],stdout=subprocess.PIPE,stderr=subprocess.PIPE)
+                # print(p1.returncode)
+                # exec(compile(open(example_file).read(), example_file, 'exec'))
+                print(p1.stdout.decode())
+                if(p1.returncode==0):
+                    print(p1.stdout.decode())
+                    self.success_files.append(example)
+                else:
+                    print("output error:")
+                    print(p1.stderr.decode())
+                print(self.success_files)    
             except Exception as e:
                 print("Failed to execute {} with exception {}".format(str(example),(str(e))))
                 self.failed_files.append(example)
