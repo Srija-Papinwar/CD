@@ -103,7 +103,7 @@ class executePythonResources():
         """
         cwd = os.getcwd()
         os.chdir('/home/venkatesh/Documents/oneview-python/examples')
-        for example in ["ethernet_networks"]:
+        for example in self.exe:
             try:
                 print(os.getcwd())
                 example_file = example + str('.py')
