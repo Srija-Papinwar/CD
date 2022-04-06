@@ -118,17 +118,17 @@ if __name__ == '__main__':
     updateJsonFile()
     selected_sdk = sys.argv[1]
     api_version = sys.argv[2]
-    #repo = createGitRepositories(selected_sdk)
-    #branchName = createFeatureBranch(repo, 'feature')
+    # #repo = createGitRepositories(selected_sdk)
+    # #branchName = createFeatureBranch(repo, 'feature')
     print("---------Started executing files---------")
-    # LOG_FILENAME = datetime.now().strftime('logfile_%H_%M_%d_%m_%Y.log')
-    # f = open(LOG_FILENAME, 'w')
-    # original = sys.stdout
-    # sys.stdout = LogWriter(f)
+    # # LOG_FILENAME = datetime.now().strftime('logfile_%H_%M_%d_%m_%Y.log')
+    # # f = open(LOG_FILENAME, 'w')
+    # # original = sys.stdout
+    # # sys.stdout = LogWriter(f)
     resources_executor = executeResources.executeResources(selected_sdk, api_version)
     executed_files = resources_executor.execute(resource_dict)
     # sys.stdout = original
-    if executed_files:
+    if True:
         print("---------Started writing to CHANGELOG.md---------")
         changelog_generator = changeLogGenerator.changeLogGenerator(resource_dict, api_version)
         changelog_generator.write_data()
@@ -136,14 +136,14 @@ if __name__ == '__main__':
         endpointsfile_writer = writeEndPointsFile.writeEndpointsFile('## HPE OneView', resource_dict, api_version)
         endpointsfile_writer.main()
 
-    repo.git.add(A=True)
-    repo.git.commit('-m', 'PR for reelase changes #pr',
-                    author='chebroluharika@gmail.com') # to commit changes
-    repo.git.push('--set-upstream', 'origin', branchName)
-    repo.close()
-    os.chdir(path) # Navigate to parent directory
-    # Delete git cloned directory as cleanup
-    if os.path.exists(os.getcwd() + '/' + str(selected_sdk)):
-        shutil.rmtree(os.getcwd() + '/' + str(selected_sdk) + '/', ignore_errors=True)
+    # repo.git.add(A=True)
+    # repo.git.commit('-m', 'PR for reelase changes #pr',
+    #                 author='chebroluharika@gmail.com') # to commit changes
+    # repo.git.push('--set-upstream', 'origin', branchName)
+    # repo.close()
+    # os.chdir(path) # Navigate to parent directory
+    # # Delete git cloned directory as cleanup
+    # if os.path.exists(os.getcwd() + '/' + str(selected_sdk)):
+    #     shutil.rmtree(os.getcwd() + '/' + str(selected_sdk) + '/', ignore_errors=True)
 
     # clean_up_files()

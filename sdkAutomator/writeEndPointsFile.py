@@ -187,9 +187,9 @@ class writeEndpointsFile(object):
     def main(self):
         i = 0
         print("------Initiating write to endpoints file--------")
-        for ele in self.resource_dict.keys():
-            formatted_resource_name = '**' + ele + '**'
-            self.resource_names.append(formatted_resource_name)
+        # # for ele in self.resource_dict.keys():
+        # #     formatted_resource_name = '**' + ele + '**'
+        # #     self.resource_names.append(formatted_resource_name)
         self.add_column(self.product_table_name)
         for resource_name in self.resource_names:
             webscraping_data = dataScraping(self.resource_dict[resource_name])
