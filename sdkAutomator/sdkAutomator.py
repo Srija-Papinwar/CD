@@ -98,7 +98,7 @@ def createFeatureBranch(repo, branchName):
     return 
     
 def updateJsonFile():
-    jsonFile = open("./auto_config.json", "r") # Open the JSON file for reading
+    jsonFile = open("../auto_config.json", "r") # Open the JSON file for reading
     data = json.load(jsonFile) # Read the JSON into the buffer
     jsonFile.close() # Close the JSON file
 
@@ -127,8 +127,8 @@ if __name__ == '__main__':
     # # f = open(LOG_FILENAME, 'w')
     # # original = sys.stdout
     # # sys.stdout = LogWriter(f)
-    resources_executor = executeResources.executeResources(selected_sdk, api_version)
-    executed_files = resources_executor.execute(resource_dict)
+    # resources_executor = executeResources.executeResources(selected_sdk, api_version)
+    # executed_files = resources_executor.execute(resource_dict)
     # sys.stdout = original
     # if True:
     #     print("---------Started writing to CHANGELOG.md---------")
