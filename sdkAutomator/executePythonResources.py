@@ -18,9 +18,9 @@ class executePythonResources():
     To Execute Python SDK.
 
     """
-    config_rename_file = os.getcwd() +'config-rename.json'
+    config_rename_file = 'config-rename.json'
     config_rename_dummy_file = os.getcwd() + '/oneview-python/examples/config-rename_dummy.json'
-    config_file = os.getcwd() + 'config.json'
+    config_file = 'config.json'
 
     def __init__(self, resource_dict):
         self.auto_config = load_from_file("auto_config") 

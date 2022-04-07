@@ -130,13 +130,13 @@ if __name__ == '__main__':
     resources_executor = executeResources.executeResources(selected_sdk, api_version)
     executed_files = resources_executor.execute(resource_dict)
     # sys.stdout = original
-    if True:
-        print("---------Started writing to CHANGELOG.md---------")
-        changelog_generator = changeLogGenerator.changeLogGenerator(resource_dict, api_version)
-        changelog_generator.write_data()
-        print("---------Completed writing to CHANGELOG.md---------")
-        endpointsfile_writer = writeEndPointsFile.writeEndpointsFile('## HPE OneView', resource_dict, api_version)
-        endpointsfile_writer.main()
+    # if True:
+    #     print("---------Started writing to CHANGELOG.md---------")
+    #     changelog_generator = changeLogGenerator.changeLogGenerator(resource_dict, api_version)
+    #     changelog_generator.write_data()
+    #     print("---------Completed writing to CHANGELOG.md---------")
+    #     endpointsfile_writer = writeEndPointsFile.writeEndpointsFile('## HPE OneView', resource_dict, api_version)
+    #     endpointsfile_writer.main()
 
     # repo.git.add(A=True)
     # repo.git.commit('-m', 'PR for reelase changes #pr',
