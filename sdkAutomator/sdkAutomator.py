@@ -98,7 +98,7 @@ def createFeatureBranch(repo, branchName):
     return 
     
 def updateJsonFile():
-    jsonFile = open("auto_config.json", "r") # Open the JSON file for reading
+    jsonFile = open("./auto_config.json", "r") # Open the JSON file for reading
     data = json.load(jsonFile) # Read the JSON into the buffer
     jsonFile.close() # Close the JSON file
 
