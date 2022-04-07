@@ -1,5 +1,5 @@
 {
-    "python": {
+        "python": {
         "storage_system_password": "<storage-password>", 
         "hypervisor_password": "<hypervisor-manager-password>", 
         "hypervisor_user_name": "<hypervisor_manager-username>", 
@@ -13,33 +13,49 @@
         "domain_directory": "<oneview-domain-directory>", 
         "i3s_ip": "<image-streamer-IP>", 
         "hardware_variant": "<example-Synergy/C700>", 
-        "oneview_ip": "10.1.19.43", 
-        "password": "admin123", 
-        "user_name": "adminstrator", 
-        "api_version": "3800"
+        "oneview_ip": "", 
+        "password": "", 
+        "user_name": "", 
+        "api_version": ""
     }, 
     "fts": {
-        "dcs_ipv4_3": "10.1.19.43", 
-        "dcs_ipv4_2": "10.1.19.42", 
-        "dcs_ipv4_1": "10.1.19.41", 
-        "dcs_username": "root", 
-        "subnet_mask": "255.255.192.0", 
-        "gateway": "10.1.0.1", 
-        "dcs_password": "hponeview"
+        "dcs_ipv4_3": "<dcs_ipv4_3>", 
+        "dcs_ipv4_2": "<dcs_ipv4_2>", 
+        "dcs_ipv4_1":"<dcs_ipv4_1>", 
+        "dcs_username": "<dcs_username>", 
+        "subnet_mask": "<subnet_mask>", 
+        "gateway": "<gateway>", 
+        "dcs_password": "<dcs_password>"
     }, 
     "collection": {
         "collection_path": "<path-to-oneview-ansible-collection/playbooks>"
     }, 
     "deploy_ova": {
-        "vcenter_username": "SrijaP@LAB.LOCAL", 
-        "datacenter": "ZeusDC", 
-        "ova_path": "/home/venkatesh/latestbuildfile.ova", 
-        "network": "pgVLAN141", 
-        "vcenter_ip": "15.146.41.16", 
-        "cluster": "Cluster01", 
-        "host": "15.146.41.24", 
-        "datastore": "vsanDatastore", 
-        "vcenter_password": "Welcome123#", 
-        "vmname": "jenmaster2"
+        "vcenter_username": "<>", 
+        "datacenter": "<>", 
+        "ova_path": "<>", 
+        "network": "<>", 
+        "vcenter_ip":"<>", 
+        "cluster": "<>", 
+        "host": "<>", 
+        "datastore": "<>", 
+        "vcenter_password": "<>", 
+        "vmname": "<>"
+    },
+    "sdk": {
+            
+            "ssl_certificate":"",
+            "sessionID": "",
+            "enclosure_hostname": "",
+            "enclosure_username": "",
+            "enclosure_password": "",
+            "enclosure_group_uri": "",
+            "server_mpHostsAndRanges": [],
+            "server_hostname": "",
+            "server_username": "",
+            "server_password": "",
+            "power_device_hostname": "",
+            "power_device_username": "",
+            "power_device_password": ""
     }
 }

@@ -98,7 +98,7 @@ def createFeatureBranch(repo, branchName):
     return 
     
 def updateJsonFile():
-    jsonFile = open("/home/venkatesh/CD/auto_config.json", "r") # Open the JSON file for reading
+    jsonFile = open("auto_config.json", "r") # Open the JSON file for reading
     data = json.load(jsonFile) # Read the JSON into the buffer
     jsonFile.close() # Close the JSON file
 
@@ -107,7 +107,9 @@ def updateJsonFile():
 
     ## Working with buffered content
     # tmp = data["oneview_ip"] 
-    data["oneview_ip"] = oneview_ip
+    data["oneview_cred"]["oneview_ip"] = oneview_ip
+    
+
 
     ## Save our changes to JSON file
     jsonFile = open("auto_config.json", "w+")

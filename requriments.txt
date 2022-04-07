@@ -1,7 +1,13 @@
 requests
 # beautifulsoup4
-# if unable to install the rebotframework-sshlibrary try upgrading "pip3 install -U pip"
+# if unable to install the rebotframework-sshlibrary try python3 -m pip install --upgrade robotframework-sshlibrary"
 pyvmomi
 jmespath
 gitpython
 docker
+beautifulsoup
+beautifulsoup
+subprocess.run
+bs4
+gitpython
+

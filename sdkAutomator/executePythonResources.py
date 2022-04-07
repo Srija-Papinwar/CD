@@ -18,17 +18,17 @@ class executePythonResources():
     To Execute Python SDK.
 
     """
-    config_rename_file = os.getcwd() + '/oneview-python/examples/config-rename.json'
+    config_rename_file = os.getcwd() +'config-rename.json'
     config_rename_dummy_file = os.getcwd() + '/oneview-python/examples/config-rename_dummy.json'
-    config_file = os.getcwd() + '/oneview-python/examples/config.json'
+    config_file = os.getcwd() + 'config.json'
 
     def __init__(self, resource_dict):
         self.auto_config = load_from_file("auto_config") 
-        if (os.path.isfile(self.config_rename_file)):
-            shutil.copyfile(self.config_rename_file, self.config_rename_dummy_file)
+        # if (os.path.isfile(self.config_rename_file)):
+        #     shutil.copyfile(self.config_rename_file, self.config_rename_dummy_file)
         self.resource_dict = resource_dict
         self.exe = self.load_resources()
-        self.generate_config_values()
+       
 
         
     def load_resources(self):
@@ -61,7 +61,7 @@ class executePythonResources():
         check = self.check_validate_config(self.config_rename_file)
         # if config-rename.json file is present, then rename and copy contents into renamed file.
         if check:
-            shutil.copyfile(self.config_rename_file, self.config_rename_dummy_file)
+            # shutil.copyfile(self.config_rename_file, self.config_rename_dummy_file)
             os.rename(self.config_rename_file, self.config_file)
             try:
                 # load credentials
@@ -81,6 +81,7 @@ class executePythonResources():
                     json_object["storage_system_username"] = self.auto_config["python"]["storage_system_username"]
                     json_object["storage_system_password"] = self.auto_config["python"]["storage_system_password"]
                     json_object["storage_system_family"] = self.auto_config["python"]["storage_system_family"]
+                    json_object=self.auto_config["sdk"]
                     with open(self.config_file, 'w') as config:
                         json.dump(json_object, config,indent=4)
             # if there is an exception thrown while updating credentials, revert all previous operations
@@ -103,6 +104,7 @@ class executePythonResources():
         """
         cwd = os.getcwd()
         os.chdir('/home/venkatesh/Documents/oneview-python/examples')
+        self.generate_config_values()
         for example in self.exe:
             try:
                 print(os.getcwd())
