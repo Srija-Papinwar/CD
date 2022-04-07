@@ -65,7 +65,7 @@ class executePythonResources():
         # if config-rename.json file is present, then rename and copy contents into renamed file.
         if check:
             # shutil.copyfile(self.config_rename_file, self.config_rename_dummy_file)
-            os.rename(self.config_rename_file, self.config_file)
+            os.rename(os.getcwd()+"/"+self.config_rename_file, os.getcwd()+"/"+self.config_file)
             print("==================")
             print(os.getcwd())
             print(self.config_file)
