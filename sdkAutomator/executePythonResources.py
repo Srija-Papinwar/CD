@@ -73,6 +73,7 @@ class executePythonResources():
                 # load credentials
                 with open(self.config_file, 'r') as config:
                     json_object = json.load(config)
+                    config1=open(self.config_file, 'w')
                     json_object["ip"] = self.auto_config["oneview_cred"]["oneview_ip"]
                     json_object["credentials"]["userName"] = self.auto_config["oneview_cred"]["user_name"]
                     json_object["credentials"]["password"] = self.auto_config["oneview_cred"]["password"]
@@ -87,9 +88,19 @@ class executePythonResources():
                     json_object["storage_system_username"] = self.auto_config["python"]["storage_system_username"]
                     json_object["storage_system_password"] = self.auto_config["python"]["storage_system_password"]
                     json_object["storage_system_family"] = self.auto_config["python"]["storage_system_family"]
-                    json_object=self.auto_config["sdk"]
-                    with open(self.config_file, 'w') as config:
-                        json.dump(json_object, config,indent=4)
+                    json_object["enclosure_hostname"]=self.auto_config["sdk"]["enclosure_hostname"]
+                    json_object["enclosure_username"]=self.auto_config["sdk"]["enclosure_username"]
+                    json_object["enclosure_password"]=self.auto_config["sdk"]["enclosure_password"]
+                    json_object["enclosure_password"]=self.auto_config["sdk"]["enclosure_password"]
+                    json_object["enclosure_group_uri"]=self.auto_config["sdk"]["enclosure_group_uri"]
+                    json_object["server_mpHostsAndRanges"]=self.auto_config["sdk"]["server_mpHostsAndRanges"]
+                    json_object["server_hostname"]=self.auto_config["sdk"]["server_hostname"]
+                    json_object["server_password"]=self.auto_config["sdk"]["server_password"]
+                    json_object["power_device_hostname"]=self.auto_config["sdk"]["power_device_hostname"]
+                    json_object["power_device_username"]=self.auto_config["sdk"]["power_device_username"]
+                    json_object["power_device_password"]=self.auto_config["sdk"]["power_device_password"]
+                    json_object["ssl_certificate"]=self.auto_config["sdk"]["ssl_certificate"]
+                    json.dump(json_object, config1,indent=4)
             # if there is an exception thrown while updating credentials, revert all previous operations
             # to make it constant.
             except Exception as e:
@@ -117,8 +128,8 @@ class executePythonResources():
                 example_file = example + str('.py')
                 print(">> Executing {}..".format(example))
                 p1=subprocess.run(['python3',example_file],stdout=subprocess.PIPE,stderr=subprocess.PIPE)
-                # print(p1.returncode)
-                # exec(compile(open(example_file).read(), example_file, 'exec'))
+                # # print(p1.returncode)
+                # # exec(compile(open(example_file).read(), example_file, 'exec'))
                 print(p1.stdout.decode())
                 if(p1.returncode==0):
                     print(p1.stdout.decode())
