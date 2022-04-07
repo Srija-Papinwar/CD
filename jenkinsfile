@@ -1,0 +1,35 @@
+pipeline
+{
+    agent any
+    stages
+    {
+        
+        stage('deploy_ova')
+        {
+            steps
+            {
+                
+                sh './1.sh'
+                sleep time: 6, unit: 'MINUTES'
+            }
+        }
+        stage('ipaddressVM')
+        {
+            steps
+            {
+                
+                sh './2.sh'
+                sleep time: 12, unit: 'MINUTES'
+            }
+        }
+        stage('dcs_fts')
+        {
+            steps
+            {
+                
+                sh './3.sh'
+                
+            }
+        }
+    }
+}

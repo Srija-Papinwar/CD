@@ -1,0 +1,46 @@
+{
+    "python": {
+        "storage_system_password": "<storage-password>",
+        "hypervisor_password": "<hypervisor-manager-password>",
+        "hypervisor_user_name": "<hypervisor_manager-username>",
+        "storage_system_hostname": "<storage-user-ip>",
+        "storage_system_family": "<example-StoreServ>",
+        "server_certificate_ip": "<server-certificate-ip>",
+        "hypervisor_manager_ip": "<hypervisor-manager-ip>",
+        "storage_system_username": "<storage-user-name>"
+    },
+    "oneview_cred": {
+        "domain_directory": "<oneview-domain-directory>",
+        "i3s_ip": "<image-streamer-IP>",
+        "hardware_variant": "<example-Synergy/C700>",
+        "oneview_ip": "10.1.19.43",
+        "password": "admin123",
+        "user_name": "adminstrator",
+        "api_version": "3800"
+    },
+    "fts": {
+        "dcs_ipv4_3": "10.1.19.43",
+        "dcs_ipv4_2": "10.1.19.42",
+        "dcs_ipv4_1": "10.1.19.41",
+        "dcs_username": "root",
+        "subnet_mask": "255.255.192.0",
+        "gateway": "10.1.0.1",
+        "dcs_password": "hponeview"
+    },
+    "collection": {
+        "collection_path": "<path-to-oneview-ansible-collection/playbooks>"
+    },
+    "deploy_ova": {
+        "vcenter_username": "SrijaP@LAB.LOCAL",
+        "datacenter": "ZeusDC",
+        "ova_path": "/home/venkatesh/latestbuildfile.ova",
+        "network": "pgVLAN141",
+        "vcenter_ip": "15.146.41.16",
+        "cluster": "Cluster01",
+        "host": "15.146.41.24",
+        "datastore": "vsanDatastore",
+        "vcenter_password": "Welcome123#",
+        "vmname": "jenmaster2"
+    },
+    "oneview_ip": "10.1.19.43"
+}
