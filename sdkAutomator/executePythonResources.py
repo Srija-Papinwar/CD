@@ -61,11 +61,13 @@ class executePythonResources():
         check = self.check_validate_config(self.config_rename_file)
         print("==================")
         print(self.config_rename_file)
+        print(os.getcwd())
         # if config-rename.json file is present, then rename and copy contents into renamed file.
         if check:
             # shutil.copyfile(self.config_rename_file, self.config_rename_dummy_file)
             os.rename(self.config_rename_file, self.config_file)
             print("==================")
+            print(os.getcwd())
             print(self.config_file)
             try:
                 # load credentials
