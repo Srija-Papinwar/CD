@@ -112,7 +112,7 @@ def updateJsonFile():
 
 
     ## Save our changes to JSON file
-    jsonFile = open("auto_config.json", "w+")
+    jsonFile = open("../auto_config.json", "w+")
     json.dump(data,jsonFile,indent=4)
     jsonFile.close()
 
@@ -127,8 +127,8 @@ if __name__ == '__main__':
     # # f = open(LOG_FILENAME, 'w')
     # # original = sys.stdout
     # # sys.stdout = LogWriter(f)
-    # resources_executor = executeResources.executeResources(selected_sdk, api_version)
-    # executed_files = resources_executor.execute(resource_dict)
+    resources_executor = executeResources.executeResources(selected_sdk, api_version)
+    executed_files = resources_executor.execute(resource_dict)
     # sys.stdout = original
     # if True:
     #     print("---------Started writing to CHANGELOG.md---------")
