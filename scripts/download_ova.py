@@ -46,11 +46,11 @@ def find_td_entries(original):
 
 ova_rc_build = find_td_entries(True)
 if ova_rc_build.find('FAILED') == '-1':
-    ova_rc_build = find_td_entries(False)    
-file_name =  "latestbuildfile.ova"
+    ova_rc_build = find_td_entries(False) 
+#!/bin/bash
 while(True):
     url1 = URL + ova_rc_build
-    urllib.request.urlretrieve(url1, file_name)
+    urllib.request.urlretrieve(url1, "/var/lib/jenkins/workspace/master/"+file_name)
     if (os.path.getsize(file_name) >= 2693642240):
         print("Download Successful")
         break
