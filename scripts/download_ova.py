@@ -47,7 +47,8 @@ def find_td_entries(original):
 ova_rc_build = find_td_entries(True)
 if ova_rc_build.find('FAILED') == '-1':
     ova_rc_build = find_td_entries(False) 
-#!/bin/bash
+   
+file_name =  "latestbuildfile.ova"
 while(True):
     url1 = URL + ova_rc_build
     urllib.request.urlretrieve(url1, "/var/lib/jenkins/workspace/master/"+file_name)
