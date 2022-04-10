@@ -14,7 +14,7 @@ import os
 from pathlib import Path
 
 URL = 'http://ci-artifacts04.vse.rdlabs.hpecorp.net/omni/master/OVA/DCS-CP-synergy/'
-# r = requests.get(URL)
+r = requests.get(URL)
 #print(r.content)
 
 def find_td_entries(original):
@@ -44,14 +44,14 @@ def find_td_entries(original):
     
 # execution starts here ...
 
-# ova_rc_build = find_td_entries(True)
-# if ova_rc_build.find('FAILED') == '-1':
-#     ova_rc_build = find_td_entries(False) 
+ova_rc_build = find_td_entries(True)
+if ova_rc_build.find('FAILED') == '-1':
+    ova_rc_build = find_td_entries(False) 
    
 file_name =  "latestbuildfile.ova"
 while(True):
-    # url1 = URL + ova_rc_build
-    # urllib.request.urlretrieve(url1, "/var/lib/jenkins/workspace/master/"+file_name)
+    url1 = URL + ova_rc_build
+    urllib.request.urlretrieve(url1, "/var/lib/jenkins/workspace/master/"+file_name)
     if (os.path.getsize("/var/lib/jenkins/workspace/master/"+file_name) >= 2693642240):
         print("Download Successful")
         break
