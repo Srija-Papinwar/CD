@@ -50,9 +50,9 @@ if ova_rc_build.find('FAILED') == '-1':
    
 file_name =  "latestbuildfile.ova"
 while(True):
-    url1 = URL + ova_rc_build
-    urllib.request.urlretrieve(url1, "/var/lib/jenkins/workspace/master/"+file_name)
-    if (os.path.getsize(file_name) >= 2693642240):
+    # url1 = URL + ova_rc_build
+    # urllib.request.urlretrieve(url1, "/var/lib/jenkins/workspace/master/"+file_name)
+    if (os.path.getsize("/var/lib/jenkins/workspace/master/"+file_name) >= 2693642240):
         print("Download Successful")
         break
     else:
