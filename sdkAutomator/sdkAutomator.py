@@ -102,7 +102,7 @@ def updateJsonFile():
     data = json.load(jsonFile) # Read the JSON into the buffer
     jsonFile.close() # Close the JSON file
 
-    ipAddressFile = open('/var/lib/workspace/master/scripts/ipaddress.txt', 'r')
+    ipAddressFile = open('/var/lib/workspace/jenkins/master/scripts/ipaddress.txt', 'r')
     oneview_ip = ipAddressFile.read()
 
     ## Working with buffered content
